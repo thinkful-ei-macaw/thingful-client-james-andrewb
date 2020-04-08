@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
-// import PrivateRoute from '../Utils/PrivateRoute'
+import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import ThingListPage from '../../routes/ThingListPage/ThingListPage'
 import ThingPage from '../../routes/ThingPage/ThingPage'
@@ -40,7 +40,7 @@ class App extends Component {
               path={'/register'}
               component={RegistrationPage}
             />
-            <Route
+            <PrivateRoute
               path={'/thing/:thingId'}
               component={ThingPage}
             />
